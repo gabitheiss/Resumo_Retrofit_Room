@@ -1,0 +1,16 @@
+package com.example.resumo_retrofit_room.di
+
+import com.example.resumo_retrofit_room.repository.GithubRepository
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+
+@Module
+@InstallIn(SingletonComponent::class)
+object HiltModule {
+
+    @Provides
+    fun provideGithubRepository() : GithubRepository = GithubRepository()
+
+}
