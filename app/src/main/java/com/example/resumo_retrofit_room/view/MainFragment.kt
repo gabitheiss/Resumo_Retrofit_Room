@@ -17,8 +17,9 @@ import com.example.resumo_retrofit_room.databinding.MainFragmentBinding
 import com.example.resumo_retrofit_room.model.GithubModel
 import com.example.resumo_retrofit_room.view_model.MainViewModel
 import dagger.hilt.EntryPoint
+import dagger.hilt.android.AndroidEntryPoint
 
-@EntryPoint
+@AndroidEntryPoint
 class MainFragment : Fragment(R.layout.main_fragment) {
 
     companion object {

@@ -1,17 +1,16 @@
 package com.example.resumo_retrofit_room.repository
 
+import com.example.resumo_retrofit_room.dao.GithubDao
 import com.example.resumo_retrofit_room.model.GithubRepositoryResponse
+import com.example.resumo_retrofit_room.service.GithubServices
 import com.example.resumo_retrofit_room.service.RetrofitService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
-class GithubRepository() {
-
-    //Buscamos nossa Interface implementada do retrofit
-    private val githubServices = RetrofitService.getGithubServices()
-
-
+class GithubRepository@Inject constructor(private val githubDao: GithubDao,
+                                          private val githubServices : GithubServices) {
 
     //Vamos expor o serviço de fetchRepositories para as outras camadas.
     fun fetchRepositories(
